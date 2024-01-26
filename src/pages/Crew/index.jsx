@@ -1,7 +1,5 @@
 const Crew = () => {
-  return (
-    <h1>Crew Page</h1>
-  );
-}
+  return <h1>Crew Page</h1>;
+};
 
 export { Crew };

@@ -1,15 +1,17 @@
 /* React */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+/* Router */
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 /* Styles */
 import './styles.css';
 
 /* Components */
-import Home from './pages/Home/';
-import { Crew } from './pages/Crew';
+import { Home } from './pages/Home';
 import { Destination } from './pages/Destination';
+import { Crew } from './pages/Crew';
 import { Technology } from './pages/Technology';
 
 const browserRouter = createBrowserRouter([
@@ -17,22 +19,21 @@ const browserRouter = createBrowserRouter([
     path: '/',
     element: <Home />
   },
-  { path: '/destination',
+  {
+    path: '/destination',
     element: <Destination />
   },
   {
-    path: '/crew',
+    path: 'crew',
     element: <Crew />
   },
   {
-    path: '/technology',
+    path: 'technology',
     element: <Technology />
   }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={browserRouter} />
-  </React.StrictMode>
-);
+root.render(<React.StrictMode>
+  <RouterProvider router={browserRouter} />
+</React.StrictMode>);
